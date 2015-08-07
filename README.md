@@ -21,6 +21,6 @@ $('nav').semisticky(function() {
 
 Option | Type | Description | Default
 -------|------|-------------|--------
-offsetLimit | integer | The height (in pixels) of how much the navigation should be hidden while scrolling down. | Defaults to `element.outerHeight()``
+offsetLimit | integer | The height (in pixels) of how much the navigation should be hidden while scrolling down. | Defaults to `element.outerHeight()`
 scrollThreshold | integer | The amount that must be scrolled before interaction starts | 50
 onScroll | function | Callback function that executes after each scroll event. `this` refers to the SemiSticky object, and the delta (the change in scroll position) is passed as the only argument. | Empty function
