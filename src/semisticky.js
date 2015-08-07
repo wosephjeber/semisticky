@@ -11,7 +11,7 @@ var SemiSticky = function(element, options) {
   this.currentOffsetAmount = 0;
   
   this.init = function() {
-    var oldScrollTop = 0;
+    var oldScrollTop = $(document).scrollTop();
     var thresholdCounter = 0;
     
     $(window).on('scroll.semisticky', function() {
