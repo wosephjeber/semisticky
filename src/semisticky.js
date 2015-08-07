@@ -1,3 +1,11 @@
+(function($) {
+  $.fn.semisticky = function(options) {
+    return this.each(function() {
+      new SemiSticky($(this), options);
+    });
+  };
+}(jQuery));
+
 var SemiSticky = function(element, options) {
   var _this = this;
   
