@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <style media="screen">
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+    * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    }
+
+    body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #333;
+    background-color: #fdfdfd;
+    }
+
+    p {
+    line-height: 1.75;
+    }
+
+    section {
+    padding: 40px;
+    }
+
+    .content {
+    margin-top: 80px;
+    }
+
+    .contained {
+    width: 36em;
+    margin: 0 auto;
+    }
+
+    @media (max-width: 41em) {
+    .contained {
+      width: 100%;
+    }
+    }
+
+    .clear {
+    clear: both;
+    }
+
+    nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #efeeea;
+    }
+
+    nav .nav-main {
+    padding: 10px 20px;
+    }
+
+    nav .nav-actions {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      background-color: #222;
+    }
+
+    nav .logo {
+    float: left;
+    line-height: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    }
+
+    nav ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+
+    nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 10px;
+    }
+
+    nav .nav-actions li {
+    font-size: 12px;
+    color: #8f8e8c;
+    line-height: 20px;
+    }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-actions">
+        <ul>
+          <li>Secondary Link 1</li>
+          <li>Secondary Link 2</li>
+          <li>Secondary Link 3</li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div class="nav-main">
+        <div class="logo">Awesome logo</div>
+        <ul>
+          <li>Link 1</li>
+          <li>Link 2</li>
+          <li>Link 3</li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </nav>
+    <div class="content">
+      <section>
+        <div class="contained">
+          <h1>Fixed nav + scroll behavior</h1>
+          <p>
+            This is an experiment with a fixed navigation bar that shows/hides
+            part of itself based on scroll direction.
+          </p>
+          <p>
+            The navigation consists of two parts: the main navigation bar +
+            a bar with some secondary links. The main navigation is always visible, but the
+            secondary links are hidden/revealed when the user scrolls down/up.
+            A scrolling threshold must be reached before the hide/reveal interaction
+            takes place.
+          </p>
+          <p>
+            I'm not sure what name to use to describe this type of navigation.
+            I'm sure a name exists, as I doubt I'm the first one to implement
+            this type of behavior, but I just don't know it. I was inspired by
+            the interaction on Facebook's iPhone app. The difference here is that
+            part of the navigation is "sticky" while the other part scrolls
+            with the browser window.
+          </p>
+          <p>
+            If you know a term that describes this behavior, feel free to tweet
+            me at @wosephjeber.
+          </p>
+          <h2>And now for some filler text</h2>
+          <p>
+            Mumblecore Banksy Brooklyn 8-bit Vice. Semiotics Austin lomo you probably haven't heard of them ugh, scenester meditation Neutra banh mi master cleanse Carles migas disrupt. Next level drinking vinegar chia, try-hard scenester XOXO vegan post-ironic listicle +1 pug before they sold out. Health goth banh mi whatever, migas paleo Pinterest street art tousled fap. Trust fund Truffaut readymade quinoa, hoodie paleo cray heirloom lomo tattooed aesthetic flexitarian. Try-hard Godard hoodie, sartorial cornhole keffiyeh Bushwick Etsy art party retro swag post-ironic. Marfa food truck crucifix, health goth umami next level Shoreditch actually XOXO bespoke scenester heirloom McSweeney's selfies locavore.
+          </p>
+          <p>
+            Food truck actually Banksy, post-ironic kogi leggings 8-bit. Flexitarian occupy tofu American Apparel, normcore McSweeney's High Life. Four loko pickled cred stumptown vinyl. Pinterest Tumblr Helvetica, tattooed direct trade Vice vinyl Etsy. Pour-over mlkshk swag, freegan fingerstache food truck master cleanse aesthetic normcore artisan before they sold out Brooklyn. Meggings ugh Vice, wayfarers Echo Park viral PBR salvia blog church-key chambray. Lumbersexual DIY bicycle rights squid, single-origin coffee brunch raw denim plaid before they sold out irony.
+          </p>
+          <p>
+            Cold-pressed cronut tofu dreamcatcher, Pitchfork retro Pinterest literally jean shorts sartorial pork belly gluten-free mixtape quinoa. Carles ennui master cleanse butcher, salvia leggings viral readymade. Actually kale chips pork belly Marfa. Disrupt blog meggings Austin. Meggings iPhone flexitarian, mlkshk ennui Banksy Brooklyn fap mixtape Truffaut art party sriracha scenester hella Carles. DIY selvage hoodie, four loko occupy 3 wolf moon seitan twee bicycle rights wayfarers keffiyeh Thundercats Etsy taxidermy. Before they sold out normcore cred single-origin coffee meh cronut stumptown, Blue Bottle Vice pork belly quinoa Wes Anderson ethical next level.
+          </p>
+          <p>
+            Banjo hashtag Echo Park Williamsburg pickled, gentrify scenester. Aesthetic banjo Portland chillwave letterpress seitan selfies gluten-free, leggings mumblecore Etsy keffiyeh. Art party seitan sartorial deep v squid, 90's listicle. Mixtape selvage four loko, dreamcatcher Portland tattooed plaid kogi. Gluten-free cred sartorial YOLO keytar fixie. Lomo asymmetrical four loko Helvetica pork belly, forage four dollar toast post-ironic. Farm-to-table Williamsburg fanny pack, 3 wolf moon church-key cray selfies.
+          </p>
+        </div>
+      </section>
+    </div>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="src/semisticky.js"></script>
+    
+    <script>
+      new SemiSticky($('nav'), {
+        offsetLimit: $('.nav-actions').outerHeight()
+      })
+    </script>
+  </body>
+</html>
