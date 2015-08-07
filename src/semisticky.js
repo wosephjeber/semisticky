@@ -11,7 +11,8 @@ var SemiSticky = function(element, options) {
   
   options = $.extend({
     offsetLimit: 0,
-    scrollThreshold: 50
+    scrollThreshold: 50,
+    onScroll: function() {}
   }, options);
   
   this.element = element;
@@ -53,6 +54,8 @@ var SemiSticky = function(element, options) {
           
         }
       }
+      
+      options.onScroll.call(_this, delta);
       
       oldScrollTop = newScrollTop;
     });
