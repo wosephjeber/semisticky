@@ -10,7 +10,7 @@ var SemiSticky = function(element, options) {
   var _this = this;
   
   options = $.extend({
-    offsetLimit: 0,
+    offsetLimit: element.outerHeight(),
     scrollThreshold: 50,
     onScroll: function() {}
   }, options);
