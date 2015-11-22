@@ -2,96 +2,163 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Semi-sticky Navigation Plugin</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:300|Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="demo/prism.css">
     
     <style media="screen">
-    @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
     * {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
     }
-
+    
     body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Open Sans', Arial, sans-serif;
-    color: #333;
-    background-color: #fdfdfd;
+      padding: 0;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: #555;
+      background-color: #fefdfc;
+      font-size: 18px;
     }
-
+    
     p {
-    line-height: 1.75;
+      font-family: 'Merriweather', serif;
+      font-size: 1.125em;
+      line-height: 1.875;
     }
-
+    
+    a {
+      text-decoration: none;
+      border-bottom: solid 1px;
+      padding-bottom: 2px;
+      color: #555;
+      -webkit-transition: color .3s;
+      transition: color .3s;
+    }
+    
+    a:hover {
+      color: #333;
+    }
+    
+    .sans-serif {
+      font-family: 'Open Sans', sans-serif;
+    }
+    
     section {
-    padding: 40px;
+      padding: 40px;
     }
-
+    
     .content {
-    margin-top: 80px;
+      margin-top: 114px;
     }
-
+    
     .contained {
-    width: 36em;
-    margin: 0 auto;
+      max-width: 37.5em;
     }
-
-    @media (max-width: 41em) {
-    .contained {
-      width: 100%;
+    
+    .centered {
+      margin: 0 auto;
     }
-    }
-
+    
     .clear {
-    clear: both;
+      clear: both;
     }
-
+    
+    .align-center {
+      text-align: center;
+    }
+    
     nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #efeeea;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2ec97b;
+      color: #fff;
     }
-
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: none;
+    }
+    
+    nav a:hover {
+      color: #fff;
+    }
+    
     nav .nav-main {
-    padding: 10px 20px;
+      padding: 10px 20px;
     }
-
+    
     nav .nav-actions {
       height: 40px;
       line-height: 40px;
       padding: 0 20px;
-      background-color: #222;
+      background-color: #30BB75;
+      color: #fff;
     }
-
-    nav .logo {
-    float: left;
-    line-height: 50px;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-transform: uppercase;
+    
+    nav .nameplate {
+      float: left;
+      border: solid 2px #fff;
+      color: #fff;
+      padding: .375em .75em;
+      position: relative;
+      border-radius: 3px;
+      font-size: 1.5em;
+      line-height: 1.125;
+      font-family: 'Garamond', 'Adobe Garamond', 'Merriweather', serif;
     }
-
+    
     nav ul {
-    float: right;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+      float: right;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
-
+    
     nav ul li {
-    display: inline-block;
-    line-height: 50px;
-    padding: 0 10px;
+      display: inline-block;
+      line-height: 50px;
+      padding: 0 10px;
     }
-
+    
     nav .nav-actions li {
-    font-size: 12px;
-    color: #8f8e8c;
-    line-height: 20px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #676564;
+      font-size: .875em;
+      padding: 20px;
+    }
+    
+    #log {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      background-color: #efeeea;
+      padding: 5px 10px;
+      font-size: .875em;
+    }
+    
+    code {
+      padding: 3px 5px;
+      background-color: #efeeea;
+      color: #555;
+      margin: 0;
+      border-radius: 2px;
+      font-size: .875em;
+    }
+    
+    pre code {
+      padding: 0;
+      background-color: transparent;
     }
     </style>
   </head>
@@ -99,58 +166,67 @@
     <nav>
       <div class="nav-actions">
         <ul>
-          <li>Secondary Link 1</li>
-          <li>Secondary Link 2</li>
-          <li>Secondary Link 3</li>
+          <li><a href="https://github.com/wosephjeber" target="_blank">Find me on GitHub</a></li>
+          <li><a href="https://twitter.com/wosephjeber" target="_blank">Find me on Twitter</a></li>
+          <li><a href="http://wosephjeber.com" target="_blank">Read my blog</a></li>
         </ul>
         <div class="clear"></div>
       </div>
       <div class="nav-main">
-        <div class="logo">Awesome logo</div>
+        <div class="nameplate">Joseph Weber</div>
         <ul>
-          <li>Link 1</li>
-          <li>Link 2</li>
-          <li>Link 3</li>
+          <li><a href="https://github.com/wosephjeber/semisticky" target="_blank">Source on GitHub</a></li>
         </ul>
         <div class="clear"></div>
       </div>
     </nav>
     <div class="content">
       <section>
-        <div class="contained">
-          <h1>Fixed nav + scroll behavior</h1>
+        <div class="contained centered">
+          <h1>Semi-sticky Navigation</h1>
           <p>
-            This is an experiment with a fixed navigation bar that shows/hides
-            part of itself based on scroll direction.
+            This is a demonstration of my <span class="sans-serif">semisticky.js</span> jQuery plugin, which
+            lets you create a fixed navigation bar that shows and hides all or
+            part of itself based on scroll behavior. If that description is confusing
+            it's because I don't know what the proper term for this type of
+            interaction is. If you know a better term, please tweet me at
+            <a href="https://twitter.com/wosephjeber" href="blank">@wosephjeber</a>.
           </p>
           <p>
-            The navigation consists of two parts: the main navigation bar +
-            a bar with some secondary links. The main navigation is always visible, but the
-            secondary links are hidden/revealed when the user scrolls down/up.
-            A scrolling threshold must be reached before the hide/reveal interaction
-            takes place.
+            Basically, it allows you to create a fixed element at the top of the
+            window that hides all or part of itself when scrolling down and reveals
+            itself when scrolling up. In this demo, I've broken the nav into two
+            sections, hiding only the top section based on the scroll direction.
           </p>
           <p>
-            I'm not sure what name to use to describe this type of navigation.
-            I'm sure a name exists, as I doubt I'm the first one to implement
-            this type of behavior, but I just don't know it. I was inspired by
-            the interaction on Facebook's iPhone app. The difference here is that
-            part of the navigation is "sticky" while the other part scrolls
-            with the browser window.
+            Here's the plugin code used on this page:
           </p>
+          <pre><code class="language-javascript">
+$('nav').semisticky({
+  offsetLimit: $('.nav-actions').outerHeight(),
+  onScroll: function(delta) {
+    $('#delta').html(delta);
+    $('#offset').html(this.currentOffsetAmount);
+    $('#state').html(this.state);
+  }
+});  
+</code></pre>
           <p>
-            If you know a term that describes this behavior, feel free to tweet
-            me at @wosephjeber.
+            I'm demonstrating the <code>onScroll()</code> callback by logging some
+            data to that <code>div</code> in the corner. With each scroll event,
+            the plugin calculates the change in scroll position, or <code>delta</code>.
+            If you're scrolling down, the <code>delta</code> is positive. If you're scrolling
+            up, the <code>delta</code> is negative.
           </p>
-          <h2>And now for some filler text</h2>
+          <h2>And now for some filler text to make this page&nbsp;longer</h2>
           <p>
-            Mumblecore Banksy Brooklyn 8-bit Vice. Semiotics Austin lomo you probably haven't heard of them ugh, scenester meditation Neutra banh mi master cleanse Carles migas disrupt. Next level drinking vinegar chia, try-hard scenester XOXO vegan post-ironic listicle +1 pug before they sold out. Health goth banh mi whatever, migas paleo Pinterest street art tousled fap. Trust fund Truffaut readymade quinoa, hoodie paleo cray heirloom lomo tattooed aesthetic flexitarian. Try-hard Godard hoodie, sartorial cornhole keffiyeh Bushwick Etsy art party retro swag post-ironic. Marfa food truck crucifix, health goth umami next level Shoreditch actually XOXO bespoke scenester heirloom McSweeney's selfies locavore.
+            Mumblecore Banksy Brooklyn 8-bit Vice. Semiotics Austin lomo you probably haven't heard of them ugh, scenester meditation Neutra banh mi master cleanse Carles migas disrupt. Next level drinking vinegar chia, try-hard scenester XOXO vegan post-ironic listicle +1 pug before they sold out. Health goth banh mi whatever, migas paleo Pinterest street art tousled. Trust fund Truffaut readymade quinoa, hoodie paleo cray heirloom lomo tattooed aesthetic flexitarian. Try-hard Godard hoodie, sartorial cornhole keffiyeh Bushwick Etsy art party retro swag post-ironic. Marfa food truck crucifix, health goth umami next level Shoreditch actually XOXO bespoke scenester heirloom McSweeney's selfies locavore.
           </p>
           <p>
             Food truck actually Banksy, post-ironic kogi leggings 8-bit. Flexitarian occupy tofu American Apparel, normcore McSweeney's High Life. Four loko pickled cred stumptown vinyl. Pinterest Tumblr Helvetica, tattooed direct trade Vice vinyl Etsy. Pour-over mlkshk swag, freegan fingerstache food truck master cleanse aesthetic normcore artisan before they sold out Brooklyn. Meggings ugh Vice, wayfarers Echo Park viral PBR salvia blog church-key chambray. Lumbersexual DIY bicycle rights squid, single-origin coffee brunch raw denim plaid before they sold out irony.
           </p>
           <p>
-            Cold-pressed cronut tofu dreamcatcher, Pitchfork retro Pinterest literally jean shorts sartorial pork belly gluten-free mixtape quinoa. Carles ennui master cleanse butcher, salvia leggings viral readymade. Actually kale chips pork belly Marfa. Disrupt blog meggings Austin. Meggings iPhone flexitarian, mlkshk ennui Banksy Brooklyn fap mixtape Truffaut art party sriracha scenester hella Carles. DIY selvage hoodie, four loko occupy 3 wolf moon seitan twee bicycle rights wayfarers keffiyeh Thundercats Etsy taxidermy. Before they sold out normcore cred single-origin coffee meh cronut stumptown, Blue Bottle Vice pork belly quinoa Wes Anderson ethical next level.
+            Cold-pressed cronut tofu dreamcatcher, Pitchfork retro Pinterest literally jean shorts sartorial pork belly gluten-free mixtape quinoa. Carles ennui master cleanse butcher, salvia leggings viral readymade. Actually kale chips pork belly Marfa. Disrupt blog meggings Austin. Meggings iPhone flexitarian, mlkshk ennui Banksy Brooklyn mixtape Truffaut art party sriracha scenester hella Carles. DIY selvage hoodie, four loko occupy 3 wolf moon seitan twee bicycle rights wayfarers keffiyeh Thundercats Etsy taxidermy. Before they sold out normcore cred single-origin coffee meh cronut stumptown, Blue Bottle Vice pork belly quinoa Wes Anderson ethical next level.
           </p>
           <p>
             Banjo hashtag Echo Park Williamsburg pickled, gentrify scenester. Aesthetic banjo Portland chillwave letterpress seitan selfies gluten-free, leggings mumblecore Etsy keffiyeh. Art party seitan sartorial deep v squid, 90's listicle. Mixtape selvage four loko, dreamcatcher Portland tattooed plaid kogi. Gluten-free cred sartorial YOLO keytar fixie. Lomo asymmetrical four loko Helvetica pork belly, forage four dollar toast post-ironic. Farm-to-table Williamsburg fanny pack, 3 wolf moon church-key cray selfies.
@@ -158,14 +234,44 @@
         </div>
       </section>
     </div>
+    <footer>
+      <div class="contained centered align-center">
+        &copy;2015 Joseph Weber
+      </div>
+    </footer>
+    
+    <div id="log">
+      Delta: <span id="delta">0</span> px | Current offset: <span id="offset">0</span>px | State: <span id="state">fixed</span>
+    </div>
     
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="src/semisticky.js"></script>
+    <script type="text/javascript" src="src/semisticky.min.js"></script>
+    
+    <script type="text/javascript">
+      // replaces < characters with &lt; to allow syntax highlighter to
+      // display HTML code instead of browser parsing and rendering it as HTML
+      $('code').each(function() {
+        $(this).html($(this).html().replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\$/g, '&#36;'));
+      });
+      
+      // suppress JS errors caused by console.log() on IE8 and 9
+      if (typeof console === 'undefined' || typeof console.log === 'undefined') {
+        window.console = {};
+        console.log = function() {};
+      }
+    </script>
+    
+    <script type="text/javascript" src="demo/prism.js"></script>
     
     <script>
       $('nav').semisticky({
         offsetLimit: $('.nav-actions').outerHeight(),
-      })
+        onScroll: function(delta) {
+          $('#delta').html(delta);
+          $('#offset').html(this.currentOffsetAmount);
+          $('#state').html(this.state);
+        }
+      });
     </script>
   </body>
 </html>
