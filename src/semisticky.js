@@ -11,7 +11,7 @@ var SemiSticky = function(element, options) {
   
   options = $.extend({
     offsetLimit: element.outerHeight(),
-    scrollThreshold: 50,
+    scrollThreshold: 0,
     onScroll: function() {}
   }, options);
   
@@ -25,15 +25,15 @@ var SemiSticky = function(element, options) {
     
     $(window).on('scroll.semisticky', function() {
       var newScrollTop = $(document).scrollTop();
-      var delta = oldScrollTop - newScrollTop;
-      thresholdCounter = Math.min(Math.max(thresholdCounter + delta, -options.scrollThreshold), options.scrollThreshold);
+      var delta = newScrollTop - oldScrollTop;
+      thresholdCounter = Math.min(Math.max(thresholdCounter - delta, -options.scrollThreshold), options.scrollThreshold);
       var newOffset;
 
       if (Math.abs(thresholdCounter) >= options.scrollThreshold || _this.state == 'scrolling') {
-        if (delta < 0 && _this.state !== 'hidden') {
+        if (delta > 0 && _this.state !== 'hidden') {
           
           if (_this.currentOffsetAmount > -options.offsetLimit) {
-            _this.currentOffsetAmount = Math.max(_this.currentOffsetAmount + delta, -options.offsetLimit);
+            _this.currentOffsetAmount = Math.max(_this.currentOffsetAmount - delta, -options.offsetLimit);
             _this.element.css('top', _this.currentOffsetAmount);
             _this.state = 'scrolling';
           } else {
@@ -41,10 +41,10 @@ var SemiSticky = function(element, options) {
             thresholdCounter = 0;
           }
           
-        } else if (delta > 0 && _this.state !== 'fixed') {
+        } else if (delta < 0 && _this.state !== 'fixed') {
           
           if (_this.currentOffsetAmount < 0) {
-            _this.currentOffsetAmount = Math.min(_this.currentOffsetAmount + delta, 0);
+            _this.currentOffsetAmount = Math.min(_this.currentOffsetAmount - delta, 0);
             _this.element.css('top', _this.currentOffsetAmount);
             _this.state = 'scrolling';
           } else {
