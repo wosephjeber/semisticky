@@ -1,5 +1,5 @@
 #Semi-Sticky Navigation
-A simple jQuery plugin to create a semi-sticky navigation bar. I really need to figure out a better term for this interaction.
+A simple jQuery plugin to create a semi-sticky navigation bar. I really need to figure out a better term for this interaction. You can [check out a demo here](http://wosephjeber.github.io/semisticky)
 
 ##Usage
 
